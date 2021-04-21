@@ -4,14 +4,20 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux'
-import { createStore, combineReducers } from 'redux'
-import counterReducer from './counter/reducer/Counter.reducer'
+import { combineReducers } from 'redux'
+import counterReducer from './counter/reducer/counter.reducer'
+import counterSlice from './counter/reducer/counter.slice'
+import { configureStore } from '@reduxjs/toolkit'
 
 const rootReducer = combineReducers({
-  counterReducer
+  counterReducer,
+  counterSlice
 })
 
-const store = createStore(rootReducer)
+// const store = createStore(rootReducer) 바닐라 리덕스
+const store = configureStore({
+  reducer: rootReducer
+})
 
 console.log("store: " + JSON.stringify(store.getState()))
 

@@ -1,11 +1,11 @@
 import React from 'react'
 import CounterContainer from './counter/container/CounterContainer'
-import Counter from "./counter/component/Counter"
+import RTKCounterContainer from './counter/container/RTKCounterContainer'
 
 function App() {
   return (
     <>
-    <CounterContainer />
+    <RTKCounterContainer />
     </>
   )
 }

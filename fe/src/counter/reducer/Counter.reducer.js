@@ -10,7 +10,6 @@ console.log("crate Action increase: " + typeof increase)
 
 const initialState = {
     number: 0,
-    name: ""
 }
 
 const counterReducer = handleActions({
@@ -29,5 +28,7 @@ const counterReducer = handleActions({
         number: prevState.number - action.payload
     })}
 }, initialState)
+
 console.log("handle Action counterReducer: " + counterReducer)
+
 export default counterReducer
